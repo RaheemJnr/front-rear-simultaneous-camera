@@ -52,7 +52,6 @@ class CameraFragment : Fragment() {
      */
     private var backgroundHandlerRear: Handler? = null
 
-
     /**
      * An [ImageReader] that handles still image capture.
      */
@@ -742,7 +741,8 @@ class CameraFragment : Fragment() {
     /**
      * Starts a background thread and its [Handler].
      */
-    private fun startBackgroundThread() {
+    private fun
+            startBackgroundThread() {
         backgroundThreadFront = HandlerThread("CameraBackgroundFront").also { it.start() }
         backgroundThreadRear = HandlerThread("CameraBackgroundRear").also { it.start() }
         backgroundHandlerFront = Handler(backgroundThreadFront?.looper)
